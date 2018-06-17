@@ -2,6 +2,7 @@ class User < ApplicationRecord
   EMAIL_PATTERN = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 
   has_secure_password
+  has_secure_token :api_token
 
   validates :password, presence: true, length: { minimum: 8 }
   validates :email, presence: true,
