@@ -1,4 +1,6 @@
-# Buzztask
+
+
+# Buzztask ![Github status](https://circleci.com/gh/tomgatzgates/buzztask.png?circle-token=60b32951209d8cd8f261f87348c0d2dd60e68fe4)
 First an foremost, Buzztask is a side project to scratch development itches.
 However, the idea of Buzztask has long been floating round in my head to solve issues I have with many todo/task management apps available today whilst loosely following the principles of GTD.
 
