@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class ActiveRecordErrorSerializerTest < ActiveSupport::TestCase
@@ -19,7 +21,7 @@ class ActiveRecordErrorSerializerTest < ActiveSupport::TestCase
     sample.errors.add(:foo, "can't be blank")
     json = ActiveRecordErrorSerializer.new(sample).serialized_json
 
-    assert_equal %i(source code title detail).sort, json[0].keys.sort
+    assert_equal %i[source code title detail].sort, json[0].keys.sort
   end
 
   test 'serialises source pointer as /data/attributes/[field]' do

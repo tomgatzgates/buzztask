@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ActiveRecordErrorSerializer
   def initialize(model)
     @model = model

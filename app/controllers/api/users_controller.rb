@@ -1,8 +1,12 @@
-class Api::UsersController < ApplicationController
-  def create
-    permitted_params = params.permit(:email, :password)
-    user = User.create!(permitted_params)
+# frozen_string_literal: true
 
-    render status: :created, body: UserSerializer.new(user).serialized_json
+module Api
+  class UsersController < ApplicationController
+    def create
+      permitted_params = params.permit(:email, :password)
+      user = User.create!(permitted_params)
+
+      render status: :created, body: UserSerializer.new(user).serialized_json
+    end
   end
 end
